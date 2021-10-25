@@ -2,3 +2,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+   .h-450 {
+      height: 450px;
+   }
+}
+
+@layer utilities {
+   .gold {
+      color: #be9656;
+   }
+}
+
+@layer utilities {
+   .w-70vw {
+      width: 70vw;
+   }
+}
+
+@layer utilities {
+   .calc-700vh-50 {
+      height: calc(100vh - 50px);
+   }
+}
+
+@layer utilities {
+   .linear-gradient {
+      background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('https://images.unsplash.com/photo-1514782831304-632d84503f6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80');
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+}
