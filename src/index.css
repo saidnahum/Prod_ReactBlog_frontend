@@ -28,8 +28,16 @@
 }
 
 @layer utilities {
-   .linear-gradient {
+   .login-bg {
       background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('https://images.unsplash.com/photo-1514782831304-632d84503f6f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=735&q=80');
+      background-repeat: no-repeat;
+      background-size: cover;
+   }
+}
+
+@layer utilities {
+   .register-bg {
+      background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url('https://images.pexels.com/photos/6357/coffee-cup-desk-pen.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
       background-repeat: no-repeat;
       background-size: cover;
    }

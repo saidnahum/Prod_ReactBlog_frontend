@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Post = () => {
    return (
@@ -14,7 +15,7 @@ const Post = () => {
                <span className="postCat font-varela-round text-base gold leading-5 mt-4 mr-3 cursor-pointer">Life</span>
             </div>
             <span className="postTitle font-josefin text-2xl font-bold mt-4 cursor-pointer">
-               Lorem ipsum dolor sit amet.
+               <Link to="/post/:postId">Lorem ipsum dolor sit amet.</Link>
             </span>
             <hr />
             <span className="postDate font-lora italic text-base text-gray-500">
