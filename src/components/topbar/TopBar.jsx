@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './topbar.css';
 
 const TopBar = () => {
-   const user = true;
+   const user = false;
    return (
       <div className="top w-full h-14 bg-white sticky top-0 grid grid-cols-3 items-center font-josefin font-light z-50">
          <div className="topLeft flex items-center justify-center space-x-2">

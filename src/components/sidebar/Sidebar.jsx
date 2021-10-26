@@ -1,6 +1,17 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
+   const [cats, setCats] = useState([]);
+
+   useEffect(() => {
+      const getCats = async() => {
+         const res = await axios.get("http://localhost:5000/api/categories");
+         setCats(res.data);
+      }
+      getCats();
+   }, []);
    return (
       <div className="col-span-3 m-5 pb-8 bg-gray-50 rounded-t-xl flex flex-col items-center">
          <div className="flex flex-col items-center mt-5">
@@ -12,12 +23,14 @@ const Sidebar = () => {
          <div className="flex flex-col items-center w-5/6">
             <span className="m-2 p-1 w-4/5 border-t-2 border-b-2 border-gray-200 font-varela-round text-lg font-normal text-center">CATEGORIES</span>
             <ul className="mb-8 text-center">
-               <li className="cursor-pointer inline-block w-2/4 mt-4">Life</li>
-               <li className="cursor-pointer inline-block w-2/4 mt-4">Music</li>
-               <li className="cursor-pointer inline-block w-2/4 mt-4">Style</li>
-               <li className="cursor-pointer inline-block w-2/4 mt-4">Sport</li>
-               <li className="cursor-pointer inline-block w-2/4 mt-4">Tech</li>
-               <li className="cursor-pointer inline-block w-2/4 mt-4">Cinema</li>
+               {
+                  cats.map(cat => (
+                     <Link to={`/?cat=${cat.name}`} key={cat._id}>
+                        <li className="cursor-pointer inline-block w-2/4 mt-4" >{cat.name}</li>
+                     </Link>
+                  ))
+               }
+               
             </ul>
          </div>
 
